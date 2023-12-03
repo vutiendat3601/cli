@@ -35,6 +35,8 @@ services:
     image: goword-api:1.0.0
     container_name: goword-api--dev
     hostname: goword-api--dev
+    depends_on:
+      - goword-db--dev
     environment:
       PROFILE: stag
       PORT: 9800
