@@ -30,7 +30,7 @@ echo   goword-api--dev: >> docker-compose.yml
 echo     image: goword-api:1.0.0 >> docker-compose.yml
 echo     container_name: goword-api--dev >> docker-compose.yml
 echo     hostname: goword-api--dev >> docker-compose.yml
-echo     restart: always
+echo     restart: always >> docker-compose.yml
 echo     depends_on: >> docker-compose.yml
 echo       - goword-db--dev >> docker-compose.yml
 echo     environment: >> docker-compose.yml
