@@ -43,7 +43,6 @@ echo       MAIL_PORT: 587 >> docker-compose.yml
 echo       MAIL_USER: vutien.dat.3601@gmail.com >> docker-compose.yml
 echo       MAIL_PASS: sbsflgbfipkxpjho >> docker-compose.yml
 echo       SSL_ENABLED: false >> docker-compose.yml
-echo       WEBSITE: http://localhost >> docker-compose.yml
 echo     volumes: >> docker-compose.yml
 echo       - ./storage:/root/goword >> docker-compose.yml
 echo     ports: >> docker-compose.yml
