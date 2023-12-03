@@ -1,3 +1,4 @@
 goword/*
 !goword/*.sh
 !goword/*.bat
+!goword/readme.txt
