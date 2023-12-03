@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # ## Build Backend
-git clone https://github.com/vutiendat3601/goword-api.git;
-docker build -t goword-api:1.0.0 ./goword-api;
-mkdir -p storage/images;
-chmod 777 -R storage;
+git clone https://github.com/vutiendat3601/goword-api.git
+docker build -t goword-api:1.0.0 ./goword-api
+mkdir -p storage/images
+chmod 777 -R storage
 
 # ## Build Frontend
-git clone https://github.com/vutiendat3601/goword-fe.git;
-docker build -t goword-fe:1.0.0-dev -f ./goword-fe/Dockerfile.dev ./goword-fe;
+git clone https://github.com/vutiendat3601/goword-fe.git
+docker build -t goword-fe:1.0.0-dev -f ./goword-fe/Dockerfile.dev ./goword-fe
 
 # ## Create docker-compose.yml
 echo "version: '3.7'
@@ -37,6 +37,7 @@ services:
     hostname: goword-api--dev
     depends_on:
       - goword-db--dev
+    restart: always
     environment:
       PROFILE: stag
       PORT: 9800
@@ -70,5 +71,4 @@ services:
 networks:
   default:
     driver: bridge
-    name: goword--dev" > docker-compose.yml;
-
+    name: goword--dev" >docker-compose.yml
