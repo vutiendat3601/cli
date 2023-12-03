@@ -2,8 +2,7 @@
 
 git "clone" "https://github.com/vutiendat3601/goword-api.git"
 docker "build" "-t" "goword-api:1.0.0" "%CD%\goword-api"
-mkdir "-p" "storage\images"
-chmod "777" "-R" "storage"
+mkdir "storage\images"
 git "clone" "https://github.com/vutiendat3601/goword-fe.git"
 docker "build" "-t" "goword-fe:1.0.0-dev" "-f" "%CD%\goword-fe\Dockerfile.dev" "%CD%\goword-fe"
 echo "version: '3.7'
@@ -62,4 +61,4 @@ services:
 networks:
   default:
     driver: bridge
-    name: goword--dev" REM UNKNOWN: {"type":"Redirect","op":{"text":">","type":"great"},"file":{"text":"docker-compose.yml","type":"Word"}}
+    name: goword--dev" > docker-compose.yml
